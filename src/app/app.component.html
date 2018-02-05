@@ -1,0 +1,16 @@
+<!--
+<md-toolbar color="primary">
+    <span class="center">RSS Feed</span>
+    <span class="pointer-cursor"><md-icon (click)="refreshFeed()">refresh</md-icon></span>
+</md-toolbar>
+-->
+<div class="sidenav">
+    <form>
+        <input type="text" placeholder="input URL">
+        <button class="btn" (click)="refreshFeed()">Load Feed</button>
+    </form>
+</div>
+<div class="main">
+    <app-feed-card *ngFor="let feed of feeds" [feed]="feed"></app-feed-card>
+    <app-spinner *ngIf="!feeds.length"></app-spinner>
+</div>

@@ -1,0 +1,13 @@
+md-card-title , md-card-subtitle {
+    display: inline-block;
+}
+.title {
+    font-size: 15px;
+    font-weight: bold;
+}
+.card-feed-entry {
+    margin: 10px;
+}
+.center {
+    margin: auto;
+}

@@ -1,0 +1,10 @@
+<!--
+<md-toolbar color="primary">
+    <span class="center"></span>
+</md-toolbar>
+-->
+<md-card class="card-feed-entry">
+    <md-card-title class="title">{{feed.title}}</md-card-title>
+    <md-card-subtitle>{{feed.pubDate | date:'dd-MM-yyyy'}}</md-card-subtitle>
+    <md-card-content>{{feed.description | stripHtmlTags}}</md-card-content>
+</md-card>
