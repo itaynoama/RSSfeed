@@ -1,8 +1,6 @@
 # RSSfeed Display
 
 The goal is to create a simple RSS feed display.
-The left side allows selecting, adding and removing RSS feeds.
-The right side displays the currently selected RSS feed.
 
 ## Tools
 * Angular 2
