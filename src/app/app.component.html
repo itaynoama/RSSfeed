@@ -1,16 +1,18 @@
-<!--
-<md-toolbar color="primary">
-    <span class="center">RSS Feed</span>
-    <span class="pointer-cursor"><md-icon (click)="refreshFeed()">refresh</md-icon></span>
-</md-toolbar>
--->
 <div class="sidenav">
-    <form>
-        <input type="text" placeholder="input URL">
-        <button class="btn" (click)="refreshFeed()">Load Feed</button>
+    <form (ngSubmit)="ChangeFeed()">
+        <input type="text" name="url" [(ngModel)]="InputRssFeed" [ngModelOptions]="{standalone: true}" placeholder="input URL">
+        <input class="btn" type="submit" value="Load Feed">
+        <div class="feedsList">
+            <button class="feedUrls" *ngFor="let feedUrl of feedUrls; let i = index;" (click)="getClickedFeed(i)" [ngClass]="{active: isActive(i)}">
+                {{feedUrl}}
+                <button (click)="deleteFeed(i)">X</button>
+            </button>
+        </div>
     </form>
 </div>
 <div class="main">
+    <md-toolbar color="primary">
+        <span class="center">{{feedUrl}}</span>
+    </md-toolbar>
     <app-feed-card *ngFor="let feed of feeds" [feed]="feed"></app-feed-card>
-    <app-spinner *ngIf="!feeds.length"></app-spinner>
 </div>

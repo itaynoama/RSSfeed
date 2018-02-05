@@ -7,9 +7,12 @@
 md-card {
     background: transparent;
 }
+.active {
+    background: #eee;
+}
 .sidenav {
     height: 100%;
-    width: 250px;
+    width: 350px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -31,7 +34,7 @@ md-card {
 }
 
 .main {
-    margin-left: 250px; /* Same as the width of the sidenav */
+    margin-left: 350px; /* Same as the width of the sidenav */
     padding: 0px 10px;
 }
 
@@ -39,7 +42,7 @@ md-card {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
-input[type="text"]{
+input[type="text"] {
     width: 153px;
     padding: 5px;
     margin-left: 5px;
@@ -47,4 +50,15 @@ input[type="text"]{
 .btn {
     padding: 5px; 
     cursor: pointer;
+}
+.feedsList button {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.feedUrls {
+    width: 330px;
+}
+form {
+    text-align: center;
 }

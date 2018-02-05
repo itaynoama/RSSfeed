@@ -26,6 +26,7 @@
     "@angular2-material/core": "^2.0.0-alpha.8-3",
     "@angular2-material/icon": "^2.0.0-alpha.8-3",
     "@angular2-material/toolbar": "^2.0.0-alpha.8-3",
+    "angular-persistence": "^1.0.1",
     "core-js": "^2.4.1",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
