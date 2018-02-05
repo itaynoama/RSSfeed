@@ -19,6 +19,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+### JSON Feed API:
+https://api.rss2json.com/v1/api.json?rss_url=[URL]
 
-
-
+### Sample feeds:
+* http://www.feedforall.com/sample.xml
+* http://www.feedforall.com/sample-feed.xml
+* http://www.feedforall.com/blog-feed.xml
+* http://www.rss-specifications.com/blog-feed.xml
