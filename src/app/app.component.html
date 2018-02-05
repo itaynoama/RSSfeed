@@ -1,8 +1,9 @@
 <div class="sidenav">
     <form (ngSubmit)="ChangeFeed()">
         <input type="text" name="url" [(ngModel)]="InputRssFeed" [ngModelOptions]="{standalone: true}" placeholder="input URL">
-        <input class="btn" type="submit" value="Load Feed">
+        <input class="btn btn-primary" type="submit" value="Load Feed">
         <div class="feedsList">
+            <h2>URL History list</h2>
             <button class="feedUrls" *ngFor="let feedUrl of feedUrls; let i = index;" (click)="getClickedFeed(i)" [ngClass]="{active: isActive(i)}">
                 {{feedUrl}}
                 <button (click)="deleteFeed(i)">X</button>

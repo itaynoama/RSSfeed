@@ -1,3 +1,7 @@
+.main {
+    margin-left: 350px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
 .center {
     margin: auto;
 }
@@ -7,8 +11,12 @@
 md-card {
     background: transparent;
 }
+md-toolbar.md-primary {
+    background: #000000;
+}
 .active {
-    background: #eee;
+    background: #009688;
+    color: #fff;
 }
 .sidenav {
     height: 100%;
@@ -22,34 +30,28 @@ md-card {
     padding-top: 20px;
 }
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.main {
-    margin-left: 350px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
 input[type="text"] {
-    width: 153px;
+    width: 200px;
     padding: 5px;
     margin-left: 5px;
 }
 .btn {
-    padding: 5px; 
+    padding: 10px 20px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
+    margin-left: 0px;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #009688;
+    color: #ffffff;
 }
 .feedsList button {
     margin: 10px;

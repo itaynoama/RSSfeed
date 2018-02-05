@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FeedService } from './feed.service';
 import { FeedEntry } from './model/feed-entry';
 
+
 // Add the RxJS Observable operators we need in this app.
 import './rxjs-operators';
 
@@ -12,19 +13,19 @@ import './rxjs-operators';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    
-    feedUrl: string = 'http://www.feedforall.com/sample.xml';
+    feedUrl: string;
     feeds: Array<FeedEntry> = [];
     InputRssFeed: string;
     feedUrls: Array<string> = [];
     selected: number;
     
+    // inject feed Service into component constructor
     constructor (private feedService: FeedService){}
     
     ngOnInit() {
         if(localStorage.length > 0) {
-            let storedList = localStorage.getItem("feed URL");
-            this.feedUrls = JSON.parse(storedList);
+            let historyList = localStorage.getItem("feed URL");
+            this.feedUrls = JSON.parse(historyList);
         }
     }
     
@@ -49,7 +50,7 @@ export class AppComponent implements OnInit {
             .subscribe(
                 feed => this.feeds = feed.items,
                 error => console.log(error));
-        this.feedUrl = this.feedUrls[i];
+        this.InputRssFeed = this.feedUrls[i];
         this.selected = i; 
     }
 
