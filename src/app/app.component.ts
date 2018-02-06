@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FeedService } from './feed.service';
 import { FeedEntry } from './model/feed-entry';
+import { PlatformLocation } from '@angular/common'
 
 
 // Add the RxJS Observable operators we need in this app.
@@ -46,10 +47,6 @@ export class AppComponent implements OnInit {
     
     getClickedFeed(i) {
         this.feeds.length = 0;
-        this.feedService.getFeedContent(this.feedUrls[i]).delay(1000)
-            .subscribe(
-                feed => this.feeds = feed.items,
-                error => console.log(error));
         this.InputRssFeed = this.feedUrls[i];
         this.selected = i; 
     }

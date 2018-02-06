@@ -1,6 +1,6 @@
 <div class="sidenav">
     <form (ngSubmit)="ChangeFeed()">
-        <input type="text" name="url" [(ngModel)]="InputRssFeed" [ngModelOptions]="{standalone: true}" placeholder="input URL">
+        <input type="text" name="url" required minlength="4" [(ngModel)]="InputRssFeed" [ngModelOptions]="{standalone: true}" placeholder="input URL">
         <input class="btn btn-primary" type="submit" value="Load Feed">
         <div class="feedsList">
             <h2>URL History list</h2>
