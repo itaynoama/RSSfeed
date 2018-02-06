@@ -1,7 +1,8 @@
 {
   "name": "rssfeed",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "ISC",
+  "author": "ITAY NOAMA",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
